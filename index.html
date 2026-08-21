@@ -21,7 +21,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Mobile Container Structure */
     .mobile-container {
       max-width: 500px;
       margin: 0 auto;
@@ -31,29 +30,28 @@
       position: relative;
     }
 
-    /* Accordion chevron animation */
     details summary::-webkit-details-marker { display: none; }
     details[open] summary .chevron-icon {
       transform: rotate(180deg);
     }
 
-    /* --- ANIMATED HIGH-CONVERSION BUTTON STYLES --- */
-    @keyframes shimmer {
+    /* --- SOFT LIGHT & CLEAN GLOW BUTTON STYLES --- */
+    @keyframes shimmerLight {
       0% { transform: translateX(-150%) skewX(-20deg); }
       50%, 100% { transform: translateX(200%) skewX(-20deg); }
     }
 
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 15px rgba(0, 82, 255, 0.4), 0 0 30px rgba(0, 82, 255, 0.15); }
-      50% { box-shadow: 0 0 25px rgba(0, 82, 255, 0.8), 0 0 45px rgba(0, 82, 255, 0.3); }
+    @keyframes softPulse {
+      0%, 100% { box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3); }
+      50% { box-shadow: 0 6px 22px rgba(37, 99, 235, 0.5); }
     }
 
     .btn-animated {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, #0052ff 0%, #003cc7 100%);
-      animation: pulseGlow 2.5s infinite ease-in-out;
-      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      animation: softPulse 3s infinite ease-in-out;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .btn-animated::after {
@@ -61,35 +59,35 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 60%;
+      width: 50%;
       height: 100%;
       background: linear-gradient(
         90deg, 
         rgba(255, 255, 255, 0) 0%, 
-        rgba(255, 255, 255, 0.45) 50%, 
+        rgba(255, 255, 255, 0.35) 50%, 
         rgba(255, 255, 255, 0) 100%
       );
       transform: translateX(-150%) skewX(-20deg);
-      animation: shimmer 3s infinite ease-in-out;
+      animation: shimmerLight 3.5s infinite ease-in-out;
     }
 
     .btn-animated:hover {
-      transform: translateY(-2px) scale(1.01);
-      filter: brightness(1.1);
+      transform: translateY(-1px);
+      filter: brightness(1.05);
     }
 
     .btn-animated:active {
-      transform: scale(0.96);
+      transform: scale(0.97);
     }
 
     .btn-icon-bounce i {
       display: inline-block;
-      animation: bouncePlane 2s infinite ease-in-out;
+      animation: floatPlane 2.5s infinite ease-in-out;
     }
 
-    @keyframes bouncePlane {
+    @keyframes floatPlane {
       0%, 100% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-2px) translateX(3px); }
+      50% { transform: translateY(-2px) translateX(2px); }
     }
   </style>
 </head>
@@ -98,16 +96,16 @@
   <div class="mobile-container">
 
     <!-- FIXED TOP TIMER BAR -->
-    <div class="bg-[#0052ff] text-white py-2.5 px-3 flex items-center justify-between sticky top-0 z-50 shadow-md text-sm font-semibold">
+    <div class="bg-[#2563eb] text-white py-2.5 px-3 flex items-center justify-between sticky top-0 z-50 shadow-md text-sm font-semibold">
       <div class="flex items-center space-x-1.5 overflow-hidden">
-        <span class="w-2.5 h-2.5 bg-amber-400 rounded-full inline-block flex-shrink-0 animate-pulse"></span>
-        <span id="bannerText" class="truncate text-xs font-bold">Redirecting to Telegram in <span id="countdown" class="bg-blue-800/80 px-1.5 py-0.5 rounded text-amber-300 font-extrabold text-sm">30</span> seconds...</span>
+        <span class="w-2.5 h-2.5 bg-amber-300 rounded-full inline-block flex-shrink-0 animate-pulse"></span>
+        <span id="bannerText" class="truncate text-xs font-bold">Redirecting to Telegram in <span id="countdown" class="bg-blue-800/60 px-1.5 py-0.5 rounded text-amber-300 font-extrabold text-sm">30</span> seconds...</span>
       </div>
       <div class="flex items-center space-x-1.5 flex-shrink-0">
-        <button id="pauseBtn" onclick="toggleTimer()" class="bg-[#1e40af] hover:bg-blue-900 text-white text-xs px-2.5 py-1 rounded-md font-bold flex items-center gap-1 border border-blue-400/30">
+        <button id="pauseBtn" onclick="toggleTimer()" class="bg-blue-700 hover:bg-blue-800 text-white text-xs px-2.5 py-1 rounded-md font-bold flex items-center gap-1 border border-blue-400/30">
           <i id="pauseIcon" class="fa-solid fa-pause text-xs"></i> <span id="pauseText">Pause</span>
         </button>
-        <button onclick="restartTimer()" class="bg-[#ff4d4d] hover:bg-red-600 text-white text-xs px-2.5 py-1 rounded-md font-bold">
+        <button onclick="restartTimer()" class="bg-red-500 hover:bg-red-600 text-white text-xs px-2.5 py-1 rounded-md font-bold">
           Restart Timer
         </button>
       </div>
@@ -116,8 +114,7 @@
     <!-- NAVBAR HEADER -->
     <header class="bg-white px-4 py-4 flex items-center justify-between border-b border-slate-100 sticky top-[41px] z-40">
       <div class="flex items-center gap-3">
-        <!-- LOGO PLACEHOLDER -->
-        <div class="w-11 h-11 rounded-full border-2 border-amber-400 p-0.5 flex items-center justify-center bg-white shadow-sm flex-shrink-0">
+        <div class="w-11 h-11 rounded-full border-2 border-amber-400 p-0.5 flex items-center justify-center bg-white shadow-xs flex-shrink-0">
           <div class="w-full h-full rounded-full bg-[#0d2240] text-amber-400 flex flex-col items-center justify-center font-extrabold text-[9px] leading-tight text-center">
             <span>VISHV</span>
           </div>
@@ -127,20 +124,19 @@
           <p class="font-extrabold text-[#0d2240] text-lg leading-none tracking-tight">Publication</p>
         </div>
       </div>
-      <!-- BUTTON 1 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="btn-animated btn-icon-bounce text-white text-sm font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-md">
+      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="btn-animated btn-icon-bounce text-white text-sm font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-xs">
         <i class="fa-paper-plane text-xs"></i> Join Telegram
       </a>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="px-5 pt-8 pb-7 text-center bg-gradient-to-b from-blue-50/40 to-white">
-      <div class="inline-flex items-center gap-1.5 bg-[#eff6ff] border border-blue-200/80 text-[#0052ff] text-sm font-bold px-4 py-2 rounded-full mb-5 shadow-2xs">
+    <section class="px-5 pt-8 pb-7 text-center bg-gradient-to-b from-blue-50/50 to-white">
+      <div class="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200/60 text-[#2563eb] text-sm font-bold px-4 py-2 rounded-full mb-5 shadow-2xs">
         <i class="fa-solid fa-sparkles text-amber-500 text-sm animate-spin" style="animation-duration: 4s;"></i> Genuine Home-Based Writing Projects 2026
       </div>
 
       <h1 class="text-3xl font-extrabold text-[#0d2240] leading-[1.25] tracking-tight mb-4">
-        Work From Home <span class="text-[#0052ff]">Writing Jobs</span> Opportunity
+        Work From Home <span class="text-[#2563eb]">Writing Jobs</span> Opportunity
       </h1>
 
       <p class="text-slate-600 text-base leading-relaxed px-1 mb-7 font-normal">
@@ -148,28 +144,27 @@
       </p>
 
       <div class="space-y-3 mb-8">
-        <!-- BUTTON 2 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 px-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg">
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 px-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-md">
           <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
-        <a href="#contact-section" class="w-full bg-white active:bg-slate-50 border border-slate-200 text-slate-800 font-bold py-3.5 px-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-xs transition hover:bg-slate-50">
-          Contact for Work <i class="fa-solid fa-arrow-right text-sm text-slate-600"></i>
+        <a href="#contact-section" class="w-full bg-white active:bg-slate-50 border border-slate-200 text-slate-800 font-bold py-3.5 px-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-2xs transition hover:bg-slate-50">
+          Contact for Work <i class="fa-solid fa-arrow-right text-sm text-slate-500"></i>
         </a>
       </div>
 
       <div class="pt-2 pb-4">
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">₹28,000+</h3>
+            <h3 class="text-3xl font-extrabold text-[#2563eb] tracking-tight">₹28,000+</h3>
             <p class="text-sm text-slate-600 font-semibold mt-1">Monthly Reward Potential</p>
           </div>
           <div>
-            <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">100%</h3>
+            <h3 class="text-3xl font-extrabold text-[#2563eb] tracking-tight">100%</h3>
             <p class="text-sm text-slate-600 font-semibold mt-1">Success Earning Reward</p>
           </div>
         </div>
         <div>
-          <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">2,500+</h3>
+          <h3 class="text-3xl font-extrabold text-[#2563eb] tracking-tight">2,500+</h3>
           <p class="text-sm text-slate-600 font-semibold mt-1">Active Safe Writers</p>
         </div>
       </div>
@@ -186,13 +181,13 @@
 
       <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs relative bg-white">
         <div class="flex justify-end mb-1">
-          <span class="bg-[#0052ff] text-white font-extrabold text-xs px-2.5 py-1 rounded uppercase tracking-wider animate-pulse">
+          <span class="bg-[#2563eb] text-white font-extrabold text-xs px-2.5 py-1 rounded uppercase tracking-wider animate-pulse">
             FAST RESPONSE
           </span>
         </div>
 
         <div class="flex items-start gap-3.5">
-          <div class="bg-blue-50 text-[#0052ff] p-3.5 rounded-xl text-xl flex-shrink-0 mt-0.5">
+          <div class="bg-blue-50 text-[#2563eb] p-3.5 rounded-xl text-xl flex-shrink-0 mt-0.5">
             <i class="fa-solid fa-location-arrow"></i>
           </div>
           <div>
@@ -204,8 +199,7 @@
         </div>
 
         <div class="mt-4">
-          <!-- BUTTON 3 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-          <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-1.5 shadow-sm">
+          <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-1.5 shadow-2xs">
             Join Telegram <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
           </a>
         </div>
@@ -229,7 +223,7 @@
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
               <h3 class="font-bold text-[#0d2240] text-base">Project 1</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">7 DAYS</span>
+              <span class="bg-blue-50 text-[#2563eb] text-xs font-bold px-2 py-0.5 rounded">7 DAYS</span>
             </div>
             <p class="text-sm text-slate-600 mt-1">50 Pages (Front+Back=100)</p>
           </div>
@@ -242,9 +236,9 @@
         <div class="p-3.5 rounded-xl flex justify-between items-center bg-white border border-slate-100">
           <div>
             <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-[#0052ff]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#2563eb]"></span>
               <h3 class="font-bold text-[#0d2240] text-base">Project 2</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">10 DAYS</span>
+              <span class="bg-blue-50 text-[#2563eb] text-xs font-bold px-2 py-0.5 rounded">10 DAYS</span>
             </div>
             <p class="text-sm text-slate-600 mt-1">90 Pages (Front+Back=180)</p>
           </div>
@@ -274,7 +268,7 @@
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
               <h3 class="font-bold text-[#0d2240] text-base">Project 4</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">26 DAYS</span>
+              <span class="bg-blue-50 text-[#2563eb] text-xs font-bold px-2 py-0.5 rounded">26 DAYS</span>
             </div>
             <p class="text-sm text-slate-600 mt-1">190 Pages (Front+Back=380)</p>
           </div>
@@ -286,14 +280,13 @@
         <div class="pt-2 px-1 space-y-2.5 text-sm text-slate-700">
           <p class="flex items-center gap-2"><i class="fa-regular fa-circle-check text-emerald-600 text-lg"></i> Guaranteed Payout Security</p>
           <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-amber-500 text-lg"></i> Flexible Extension Options Available</p>
-          <p class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-[#0052ff] text-lg"></i> Step-by-Step Sample Draft Provided</p>
+          <p class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-[#2563eb] text-lg"></i> Step-by-Step Sample Draft Provided</p>
         </div>
 
       </div>
 
       <div class="mt-6">
-        <!-- BUTTON 4 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg">
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-md">
           <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
       </div>
@@ -322,7 +315,7 @@
             "The writing guidelines were extremely straightforward. I received my payout of ₹13,500 safely on Google Pay within 24 hours of submitting my 50-page draft. Genuine and highly recommended!"
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-[#0052ff] font-bold text-sm flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-[#2563eb] font-bold text-sm flex items-center justify-center">
               RS
             </div>
             <div>
@@ -437,7 +430,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               What exactly is the Work-From-Home book writing work?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -451,7 +444,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               Is there any registration fee or security deposit required?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -465,7 +458,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               How and when will I receive my reward/payment?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -479,7 +472,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               What happens if I cannot complete the work within the duration?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -493,7 +486,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               Do I need a laptop or computer, or can I write from my mobile phone?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -507,7 +500,7 @@
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
           <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#2563eb] text-lg flex-shrink-0"></i>
               Is this work-from-home writing job safe and legally compliant?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
@@ -520,8 +513,7 @@
       </div>
 
       <div class="mt-6">
-        <!-- BUTTON 5 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg">
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full btn-animated btn-icon-bounce text-white font-extrabold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-md">
           <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
       </div>
@@ -541,11 +533,10 @@
       </p>
 
       <p class="text-sm text-slate-400 mb-5">
-        Design By: <a href="#" class="text-[#0052ff] font-semibold hover:underline">BharatX Web Agency <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+        Design By: <a href="#" class="text-[#2563eb] font-semibold hover:underline">BharatX Web Agency <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
       </p>
 
-      <!-- BUTTON 6 WITH SHIMMER ANIMATION & LeadClick EVENT -->
-      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="inline-flex items-center gap-2 btn-animated text-white font-bold px-6 py-3 rounded-xl text-sm shadow-md mb-3">
+      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="inline-flex items-center gap-2 btn-animated text-white font-bold px-6 py-3 rounded-xl text-sm shadow-xs mb-3">
         <i class="fa-paper-plane text-sm"></i> Join Telegram
       </a>
 
@@ -556,9 +547,8 @@
 
   </div>
 
-  <!-- SCRIPT FOR 30-SECOND TIMER & AUTO REDIRECTION TO THANK YOU PAGE -->
   <script>
-    let timeLeft = 30; // 30 Seconds Timer Set
+    let timeLeft = 30;
     let isPaused = false;
     let timerInterval;
 
@@ -570,7 +560,6 @@
             document.getElementById('countdown').innerText = timeLeft;
           } else {
             clearInterval(timerInterval);
-            // Redirecting automatically to Thank You Page
             window.location.href = "thankyou.html";
           }
         }
@@ -598,7 +587,6 @@
       startTimer();
     }
 
-    // Start timer on load
     startTimer();
   </script>
 
