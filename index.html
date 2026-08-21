@@ -43,14 +43,14 @@
   <div class="mobile-container">
 
     <!-- FIXED TOP TIMER BAR -->
-    <div class="bg-[#0052ff] text-white py-2.5 px-3 flex items-center justify-between sticky top-0 z-50 shadow-md text-xs font-semibold">
+    <div class="bg-[#0052ff] text-white py-2.5 px-3 flex items-center justify-between sticky top-0 z-50 shadow-md text-sm font-semibold">
       <div class="flex items-center space-x-1.5 overflow-hidden">
         <span class="w-2.5 h-2.5 bg-amber-400 rounded-full inline-block flex-shrink-0 animate-pulse"></span>
-        <span id="bannerText" class="truncate text-xs font-bold">Redirecting to Telegram in <span id="countdown" class="bg-blue-800/80 px-1.5 py-0.5 rounded text-amber-300 font-extrabold">30</span> seconds...</span>
+        <span id="bannerText" class="truncate text-xs font-bold">Redirecting to Telegram in <span id="countdown" class="bg-blue-800/80 px-1.5 py-0.5 rounded text-amber-300 font-extrabold text-sm">30</span> seconds...</span>
       </div>
       <div class="flex items-center space-x-1.5 flex-shrink-0">
         <button id="pauseBtn" onclick="toggleTimer()" class="bg-[#1e40af] hover:bg-blue-900 text-white text-xs px-2.5 py-1 rounded-md font-bold flex items-center gap-1 border border-blue-400/30">
-          <i id="pauseIcon" class="fa-solid fa-pause text-[10px]"></i> <span id="pauseText">Pause</span>
+          <i id="pauseIcon" class="fa-solid fa-pause text-xs"></i> <span id="pauseText">Pause</span>
         </button>
         <button onclick="restartTimer()" class="bg-[#ff4d4d] hover:bg-red-600 text-white text-xs px-2.5 py-1 rounded-md font-bold">
           Restart Timer
@@ -63,7 +63,7 @@
       <div class="flex items-center gap-3">
         <!-- LOGO PLACEHOLDER -->
         <div class="w-11 h-11 rounded-full border-2 border-amber-400 p-0.5 flex items-center justify-center bg-white shadow-sm flex-shrink-0">
-          <div class="w-full h-full rounded-full bg-[#0d2240] text-amber-400 flex flex-col items-center justify-center font-extrabold text-[8px] leading-tight text-center">
+          <div class="w-full h-full rounded-full bg-[#0d2240] text-amber-400 flex flex-col items-center justify-center font-extrabold text-[9px] leading-tight text-center">
             <span>VISHV</span>
           </div>
         </div>
@@ -73,32 +73,32 @@
         </div>
       </div>
       <!-- BUTTON 1 WITH LeadClick EVENT -->
-      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="bg-[#0052ff] active:scale-95 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-md transition">
+      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="bg-[#0052ff] active:scale-95 text-white text-sm font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-md transition">
         <i class="fa-paper-plane text-xs"></i> Join Telegram
       </a>
     </header>
 
     <!-- HERO SECTION -->
     <section class="px-5 pt-8 pb-7 text-center bg-gradient-to-b from-blue-50/40 to-white">
-      <div class="inline-flex items-center gap-1.5 bg-[#eff6ff] border border-blue-200/80 text-[#0052ff] text-xs font-bold px-3.5 py-1.5 rounded-full mb-5 shadow-2xs">
-        <i class="fa-solid fa-sparkles text-amber-500 text-xs"></i> Genuine Home-Based Writing Projects 2026
+      <div class="inline-flex items-center gap-1.5 bg-[#eff6ff] border border-blue-200/80 text-[#0052ff] text-sm font-bold px-4 py-2 rounded-full mb-5 shadow-2xs">
+        <i class="fa-solid fa-sparkles text-amber-500 text-sm"></i> Genuine Home-Based Writing Projects 2026
       </div>
 
       <h1 class="text-3xl font-extrabold text-[#0d2240] leading-[1.25] tracking-tight mb-4">
         Work From Home <span class="text-[#0052ff]">Writing Jobs</span> Opportunity
       </h1>
 
-      <p class="text-slate-600 text-sm leading-relaxed px-1 mb-7 font-normal">
+      <p class="text-slate-600 text-base leading-relaxed px-1 mb-7 font-normal">
         Earn a reliable side-income by typing or writing book manuscripts, publication materials, and reports. Receive clear, structured layouts, scan files, and helpful proofreading support with flexible timelines. No experience required—start earning immediately from anywhere!
       </p>
 
       <div class="space-y-3 mb-8">
         <!-- BUTTON 2 WITH LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 px-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
-          <i class="fa-paper-plane text-lg"></i> Join Telegram
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 px-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
+          <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
-        <a href="#contact-section" class="w-full bg-white active:bg-slate-50 border border-slate-200 text-slate-800 font-bold py-3.5 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-xs transition">
-          Contact for Work <i class="fa-solid fa-arrow-right text-xs text-slate-600"></i>
+        <a href="#contact-section" class="w-full bg-white active:bg-slate-50 border border-slate-200 text-slate-800 font-bold py-3.5 px-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-xs transition">
+          Contact for Work <i class="fa-solid fa-arrow-right text-sm text-slate-600"></i>
         </a>
       </div>
 
@@ -106,16 +106,16 @@
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
             <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">₹28,000+</h3>
-            <p class="text-xs text-slate-500 font-medium mt-1">Monthly Reward Potential</p>
+            <p class="text-sm text-slate-600 font-semibold mt-1">Monthly Reward Potential</p>
           </div>
           <div>
             <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">100%</h3>
-            <p class="text-xs text-slate-500 font-medium mt-1">Success Earning Reward</p>
+            <p class="text-sm text-slate-600 font-semibold mt-1">Success Earning Reward</p>
           </div>
         </div>
         <div>
           <h3 class="text-3xl font-extrabold text-[#0052ff] tracking-tight">2,500+</h3>
-          <p class="text-xs text-slate-500 font-medium mt-1">Active Safe Writers</p>
+          <p class="text-sm text-slate-600 font-semibold mt-1">Active Safe Writers</p>
         </div>
       </div>
     </section>
@@ -124,25 +124,25 @@
     <section id="contact-section" class="px-5 py-8 border-t border-slate-100 bg-white">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-[#0d2240] tracking-tight">Get in Touch with our Team</h2>
-        <p class="text-xs text-slate-500 mt-2 leading-relaxed px-2 font-normal">
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed px-1 font-normal">
           Choose your preferred platform to connect with our official career coordinators. We are available to answer your questions and assign book drafts immediately.
         </p>
       </div>
 
       <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs relative bg-white">
         <div class="flex justify-end mb-1">
-          <span class="bg-[#0052ff] text-white font-extrabold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">
+          <span class="bg-[#0052ff] text-white font-extrabold text-xs px-2.5 py-1 rounded uppercase tracking-wider">
             FAST RESPONSE
           </span>
         </div>
 
         <div class="flex items-start gap-3.5">
-          <div class="bg-blue-50 text-[#0052ff] p-3.5 rounded-xl text-lg flex-shrink-0 mt-0.5">
+          <div class="bg-blue-50 text-[#0052ff] p-3.5 rounded-xl text-xl flex-shrink-0 mt-0.5">
             <i class="fa-solid fa-location-arrow"></i>
           </div>
           <div>
-            <h3 class="font-bold text-[#0d2240] text-base">Telegram Contact</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            <h3 class="font-bold text-[#0d2240] text-lg">Telegram Contact</h3>
+            <p class="text-sm text-slate-600 mt-1 leading-relaxed">
               Join our support thread for rapid community answers. Get instant access to daily catalogs, payment proofs, and project announcements.
             </p>
           </div>
@@ -150,8 +150,8 @@
 
         <div class="mt-4">
           <!-- BUTTON 3 WITH LeadClick EVENT -->
-          <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-3.5 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm transition">
-            Join Telegram <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-1.5 shadow-sm transition">
+            Join Telegram <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
           </a>
         </div>
       </div>
@@ -161,7 +161,7 @@
     <section class="px-5 py-8 border-t border-slate-100 bg-white">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-[#0d2240] tracking-tight">Project Catalog & Rewarding Plans</h2>
-        <p class="text-xs text-slate-500 mt-2 leading-relaxed px-1 font-normal">
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed px-1 font-normal">
           Choose an assignment level that matches your schedule. The reward rates are fully transparent, guaranteed, and increase proportionally with the draft size.
         </p>
       </div>
@@ -173,13 +173,13 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-              <h3 class="font-bold text-[#0d2240] text-sm">Project 1</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-[10px] font-bold px-1.5 py-0.5 rounded">7 DAYS</span>
+              <h3 class="font-bold text-[#0d2240] text-base">Project 1</h3>
+              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">7 DAYS</span>
             </div>
-            <p class="text-xs text-slate-500 mt-0.5">50 Pages (Front+Back=100)</p>
+            <p class="text-sm text-slate-600 mt-1">50 Pages (Front+Back=100)</p>
           </div>
           <div class="text-right">
-            <p class="text-base font-extrabold text-emerald-600">₹13,500</p>
+            <p class="text-lg font-extrabold text-emerald-600">₹13,500</p>
           </div>
         </div>
 
@@ -188,13 +188,13 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-[#0052ff]"></span>
-              <h3 class="font-bold text-[#0d2240] text-sm">Project 2</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-[10px] font-bold px-1.5 py-0.5 rounded">10 DAYS</span>
+              <h3 class="font-bold text-[#0d2240] text-base">Project 2</h3>
+              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">10 DAYS</span>
             </div>
-            <p class="text-xs text-slate-500 mt-0.5">90 Pages (Front+Back=180)</p>
+            <p class="text-sm text-slate-600 mt-1">90 Pages (Front+Back=180)</p>
           </div>
           <div class="text-right">
-            <p class="text-base font-extrabold text-emerald-600">₹19,000</p>
+            <p class="text-lg font-extrabold text-emerald-600">₹19,000</p>
           </div>
         </div>
 
@@ -203,13 +203,13 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-              <h3 class="font-bold text-[#0d2240] text-sm">Project 3 <span class="text-amber-600 font-semibold text-xs">(Popular)</span></h3>
-              <span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-1.5 py-0.5 rounded">15 DAYS</span>
+              <h3 class="font-bold text-[#0d2240] text-base">Project 3 <span class="text-amber-600 font-semibold text-sm">(Popular)</span></h3>
+              <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded">15 DAYS</span>
             </div>
-            <p class="text-xs text-slate-500 mt-0.5">120 Pages (Front+Back=240)</p>
+            <p class="text-sm text-slate-600 mt-1">120 Pages (Front+Back=240)</p>
           </div>
           <div class="text-right">
-            <p class="text-base font-extrabold text-emerald-600">₹22,000</p>
+            <p class="text-lg font-extrabold text-emerald-600">₹22,000</p>
           </div>
         </div>
 
@@ -218,28 +218,28 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
-              <h3 class="font-bold text-[#0d2240] text-sm">Project 4</h3>
-              <span class="bg-blue-50 text-[#0052ff] text-[10px] font-bold px-1.5 py-0.5 rounded">26 DAYS</span>
+              <h3 class="font-bold text-[#0d2240] text-base">Project 4</h3>
+              <span class="bg-blue-50 text-[#0052ff] text-xs font-bold px-2 py-0.5 rounded">26 DAYS</span>
             </div>
-            <p class="text-xs text-slate-500 mt-0.5">190 Pages (Front+Back=380)</p>
+            <p class="text-sm text-slate-600 mt-1">190 Pages (Front+Back=380)</p>
           </div>
           <div class="text-right">
-            <p class="text-base font-extrabold text-emerald-600">₹28,000</p>
+            <p class="text-lg font-extrabold text-emerald-600">₹28,000</p>
           </div>
         </div>
 
-        <div class="pt-2 px-1 space-y-2.5 text-xs text-slate-600">
-          <p class="flex items-center gap-2"><i class="fa-regular fa-circle-check text-emerald-600 text-base"></i> Guaranteed Payout Security</p>
-          <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-amber-500 text-base"></i> Flexible Extension Options Available</p>
-          <p class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-[#0052ff] text-base"></i> Step-by-Step Sample Draft Provided</p>
+        <div class="pt-2 px-1 space-y-2.5 text-sm text-slate-700">
+          <p class="flex items-center gap-2"><i class="fa-regular fa-circle-check text-emerald-600 text-lg"></i> Guaranteed Payout Security</p>
+          <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-amber-500 text-lg"></i> Flexible Extension Options Available</p>
+          <p class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-[#0052ff] text-lg"></i> Step-by-Step Sample Draft Provided</p>
         </div>
 
       </div>
 
       <div class="mt-6">
         <!-- BUTTON 4 WITH LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
-          <i class="fa-paper-plane text-lg"></i> Join Telegram
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
+          <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
       </div>
     </section>
@@ -248,7 +248,7 @@
     <section class="px-5 py-8 border-t border-slate-100 bg-white">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-[#0d2240] tracking-tight">Our Writers Success Stories</h2>
-        <p class="text-xs text-slate-500 mt-2 leading-relaxed px-1 font-normal">
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed px-1 font-normal">
           Read feedback from verified work-from-home publishing coordinators, students, and dedicated stay-at-home parents who complete writing tasks on our platform.
         </p>
       </div>
@@ -258,21 +258,21 @@
         <!-- Review 1 -->
         <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs bg-white relative">
           <div class="flex justify-between items-start mb-2">
-            <div class="flex text-amber-400 text-xs gap-1">
+            <div class="flex text-amber-400 text-sm gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <i class="fa-solid fa-square-check text-emerald-500 text-base"></i>
+            <i class="fa-solid fa-square-check text-emerald-500 text-lg"></i>
           </div>
-          <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+          <p class="text-sm text-slate-700 italic leading-relaxed mb-4">
             "The writing guidelines were extremely straightforward. I received my payout of ₹13,500 safely on Google Pay within 24 hours of submitting my 50-page draft. Genuine and highly recommended!"
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-blue-100 text-[#0052ff] font-bold text-xs flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-[#0052ff] font-bold text-sm flex items-center justify-center">
               RS
             </div>
             <div>
-              <h4 class="font-bold text-[#0d2240] text-xs">Rahul S.</h4>
-              <p class="text-[10px] text-emerald-600 font-semibold">Verified Writer</p>
+              <h4 class="font-bold text-[#0d2240] text-sm">Rahul S.</h4>
+              <p class="text-xs text-emerald-600 font-semibold">Verified Writer</p>
             </div>
           </div>
         </div>
@@ -280,21 +280,21 @@
         <!-- Review 2 -->
         <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs bg-white relative">
           <div class="flex justify-between items-start mb-2">
-            <div class="flex text-amber-400 text-xs gap-1">
+            <div class="flex text-amber-400 text-sm gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <i class="fa-solid fa-square-check text-emerald-500 text-base"></i>
+            <i class="fa-solid fa-square-check text-emerald-500 text-lg"></i>
           </div>
-          <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+          <p class="text-sm text-slate-700 italic leading-relaxed mb-4">
             "As a stay-at-home mother, finding honest work-from-home jobs was really tough until I found this channel. I successfully typed out Project 2 (90 pages) and earned ₹19,000. Support team is always responsive."
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold text-sm flex items-center justify-center">
               PM
             </div>
             <div>
-              <h4 class="font-bold text-[#0d2240] text-xs">Priya Sharma</h4>
-              <p class="text-[10px] text-emerald-600 font-semibold">Verified Writer</p>
+              <h4 class="font-bold text-[#0d2240] text-sm">Priya Sharma</h4>
+              <p class="text-xs text-emerald-600 font-semibold">Verified Writer</p>
             </div>
           </div>
         </div>
@@ -302,21 +302,21 @@
         <!-- Review 3 -->
         <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs bg-white relative">
           <div class="flex justify-between items-start mb-2">
-            <div class="flex text-amber-400 text-xs gap-1">
+            <div class="flex text-amber-400 text-sm gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <i class="fa-solid fa-square-check text-emerald-500 text-base"></i>
+            <i class="fa-solid fa-square-check text-emerald-500 text-lg"></i>
           </div>
-          <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+          <p class="text-sm text-slate-700 italic leading-relaxed mb-4">
             "Perfect side work for college students looking to fund their own pocket money. They provided full book guidelines and scanning samples so I did not make any structural writing errors. 10/10 service."
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm flex items-center justify-center">
               AK
             </div>
             <div>
-              <h4 class="font-bold text-[#0d2240] text-xs">Amit Kumar</h4>
-              <p class="text-[10px] text-emerald-600 font-semibold">Verified Writer</p>
+              <h4 class="font-bold text-[#0d2240] text-sm">Amit Kumar</h4>
+              <p class="text-xs text-emerald-600 font-semibold">Verified Writer</p>
             </div>
           </div>
         </div>
@@ -324,21 +324,21 @@
         <!-- Review 4 -->
         <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs bg-white relative">
           <div class="flex justify-between items-start mb-2">
-            <div class="flex text-amber-400 text-xs gap-1">
+            <div class="flex text-amber-400 text-sm gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <i class="fa-solid fa-square-check text-emerald-500 text-base"></i>
+            <i class="fa-solid fa-square-check text-emerald-500 text-lg"></i>
           </div>
-          <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+          <p class="text-sm text-slate-700 italic leading-relaxed mb-4">
             "There is no complex setup or software needed to begin. I complete all typing jobs right from my smartphone using standard Google Docs app. Fast, efficient, transparent, and direct payout UPI process."
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold text-xs flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold text-sm flex items-center justify-center">
               NP
             </div>
             <div>
-              <h4 class="font-bold text-[#0d2240] text-xs">Neha Patel</h4>
-              <p class="text-[10px] text-emerald-600 font-semibold">Verified Writer</p>
+              <h4 class="font-bold text-[#0d2240] text-sm">Neha Patel</h4>
+              <p class="text-xs text-emerald-600 font-semibold">Verified Writer</p>
             </div>
           </div>
         </div>
@@ -346,21 +346,21 @@
         <!-- Review 5 -->
         <div class="border border-slate-200/90 rounded-2xl p-4 shadow-2xs bg-white relative">
           <div class="flex justify-between items-start mb-2">
-            <div class="flex text-amber-400 text-xs gap-1">
+            <div class="flex text-amber-400 text-sm gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <i class="fa-solid fa-square-check text-emerald-500 text-base"></i>
+            <i class="fa-solid fa-square-check text-emerald-500 text-lg"></i>
           </div>
-          <p class="text-xs text-slate-600 italic leading-relaxed mb-4">
+          <p class="text-sm text-slate-700 italic leading-relaxed mb-4">
             "I completed Project 3 (120 pages) in 14 days and got ₹22,000 transferred straight to my bank account. Excellent project coordinator assistance throughout the process!"
           </p>
           <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
-            <div class="w-9 h-9 rounded-full bg-rose-100 text-rose-700 font-bold text-xs flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-700 font-bold text-sm flex items-center justify-center">
               VG
             </div>
             <div>
-              <h4 class="font-bold text-[#0d2240] text-xs">Vikram Gupta</h4>
-              <p class="text-[10px] text-emerald-600 font-semibold">Verified Writer</p>
+              <h4 class="font-bold text-[#0d2240] text-sm">Vikram Gupta</h4>
+              <p class="text-xs text-emerald-600 font-semibold">Verified Writer</p>
             </div>
           </div>
         </div>
@@ -372,7 +372,7 @@
     <section class="px-5 py-8 border-t border-slate-100 bg-white">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-[#0d2240] tracking-tight">Frequently Asked Questions</h2>
-        <p class="text-xs text-slate-500 mt-2 leading-relaxed font-normal">
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed font-normal">
           Have doubts about how we coordinate, evaluate, and award book typing? We compiled immediate clear answers to queries our new writers commonly present.
         </p>
       </div>
@@ -380,84 +380,84 @@
       <div class="space-y-3">
         <!-- FAQ 1 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               What exactly is the Work-From-Home book writing work?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             We provide high-quality scanned copies or drafts of hand-written books, publications, and reports. Your job is to accurately type them out onto a digital document (Word/Docs) or write them neatly on pre-provided project pages. It's simple, authentic writing work designed to be done comfortably from home.
           </div>
         </details>
 
         <!-- FAQ 2 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               Is there any registration fee or security deposit required?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             No, we strictly do not charge any registration fees or hidden payments to start working. We believe in building a safe and trusted writer community. Beware of any platforms asking for advance payments in our name.
           </div>
         </details>
 
         <!-- FAQ 3 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               How and when will I receive my reward/payment?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             Payments are processed instantly within 24 to 48 hours after your completed book project is successfully submitted and verified by our quality assurance team. You can choose to be paid directly via UPI, GooglePay, PhonePe, or Bank Transfer.
           </div>
         </details>
 
         <!-- FAQ 4 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               What happens if I cannot complete the work within the duration?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             Our project durations (ranging from 7 days up to 26 days) are quite generous and designed with part-time writers in mind. If you ever require an extension due to emergencies, you can contact our support team to extend your timeline by 2-3 additional days.
           </div>
         </details>
 
         <!-- FAQ 5 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               Do I need a laptop or computer, or can I write from my mobile phone?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             You can easily complete most projects using a smartphone. We support typing in simple mobile text editors or using Google Docs app. For hand-written projects, you only need clean writing supplies and a good camera to upload page scans.
           </div>
         </details>
 
         <!-- FAQ 6 -->
         <details class="border border-slate-200/90 rounded-2xl overflow-hidden group bg-white shadow-2xs">
-          <summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-bold text-[#0d2240] list-none">
+          <summary class="flex justify-between items-center p-4 cursor-pointer text-sm font-bold text-[#0d2240] list-none">
             <span class="flex items-center gap-2.5 pr-2 leading-snug">
-              <i class="fa-regular fa-circle-question text-[#0052ff] text-base flex-shrink-0"></i>
+              <i class="fa-regular fa-circle-question text-[#0052ff] text-lg flex-shrink-0"></i>
               Is this work-from-home writing job safe and legally compliant?
             </span>
             <i class="fa-solid fa-chevron-down text-slate-400 text-xs chevron-icon transition-transform flex-shrink-0"></i>
           </summary>
-          <div class="px-4 pb-4 text-xs text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+          <div class="px-4 pb-4 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
             Yes. All our publishing projects are verified. We draft transparent guidelines for each book assignment. Our primary communication channel is our certified Telegram channel, which provides official daily updates and project catalogs.
           </div>
         </details>
@@ -466,8 +466,8 @@
 
       <div class="mt-6">
         <!-- BUTTON 5 WITH LeadClick EVENT -->
-        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
-          <i class="fa-paper-plane text-lg"></i> Join Telegram
+        <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="w-full bg-[#0052ff] active:scale-[0.98] text-white font-bold py-4 rounded-xl text-lg flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition">
+          <i class="fa-paper-plane text-xl"></i> Join Telegram
         </a>
       </div>
     </section>
@@ -476,25 +476,25 @@
     <footer class="bg-[#0b172a] text-white py-8 px-5 text-center">
       <div class="flex items-center justify-center gap-2 mb-2">
         <div class="w-6 h-6 rounded-full border border-amber-400 p-0.5 flex items-center justify-center bg-[#0d2240]">
-          <span class="text-amber-400 font-extrabold text-[6px]">VISHV</span>
+          <span class="text-amber-400 font-extrabold text-[7px]">VISHV</span>
         </div>
-        <h3 class="font-bold text-base text-white">Vishv Book Publication</h3>
+        <h3 class="font-bold text-lg text-white">Vishv Book Publication</h3>
       </div>
 
-      <p class="text-xs text-slate-400 mb-1 font-medium">
+      <p class="text-sm text-slate-400 mb-1 font-medium">
         © 2026 Vishv Book Publication. All Rights Reserved.
       </p>
 
-      <p class="text-xs text-slate-400 mb-5">
-        Design By: <a href="#" class="text-[#0052ff] font-semibold hover:underline">BharatX Web Agency <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i></a>
+      <p class="text-sm text-slate-400 mb-5">
+        Design By: <a href="#" class="text-[#0052ff] font-semibold hover:underline">BharatX Web Agency <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
       </p>
 
       <!-- BUTTON 6 WITH LeadClick EVENT -->
-      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="inline-flex items-center gap-2 bg-[#0052ff] active:scale-95 text-white font-bold px-6 py-3 rounded-xl text-xs shadow-md transition mb-3">
-        <i class="fa-paper-plane text-xs"></i> Join Telegram
+      <a href="thankyou.html" onclick="if(typeof fbq === 'function'){ fbq('trackCustom', 'LeadClick'); }" class="inline-flex items-center gap-2 bg-[#0052ff] active:scale-95 text-white font-bold px-6 py-3 rounded-xl text-sm shadow-md transition mb-3">
+        <i class="fa-paper-plane text-sm"></i> Join Telegram
       </a>
 
-      <p class="text-xs text-slate-400 font-medium">
+      <p class="text-sm text-slate-400 font-medium">
         Join 2,500+ Active Members
       </p>
     </footer>
@@ -526,10 +526,10 @@
       isPaused = !isPaused;
       if (isPaused) {
         document.getElementById('pauseText').innerText = "Resume";
-        document.getElementById('pauseIcon').className = "fa-solid fa-play text-[10px]";
+        document.getElementById('pauseIcon').className = "fa-solid fa-play text-xs";
       } else {
         document.getElementById('pauseText').innerText = "Pause";
-        document.getElementById('pauseIcon').className = "fa-solid fa-pause text-[10px]";
+        document.getElementById('pauseIcon').className = "fa-solid fa-pause text-xs";
       }
     }
 
@@ -537,7 +537,7 @@
       timeLeft = 30;
       isPaused = false;
       document.getElementById('pauseText').innerText = "Pause";
-      document.getElementById('pauseIcon').className = "fa-solid fa-pause text-[10px]";
+      document.getElementById('pauseIcon').className = "fa-solid fa-pause text-xs";
       document.getElementById('countdown').innerText = '30';
       clearInterval(timerInterval);
       startTimer();
